@@ -1,3 +1,10 @@
+//
+//  ResponseData.swift
+//  WithYou
+//
+//  Created by 배수호 on 8/14/25.
+//
+
 import Foundation
 
 struct ResponseData<T: Codable>: Codable {
@@ -6,6 +13,3 @@ struct ResponseData<T: Codable>: Codable {
     let message: String
     let result: T?
 }
-
-
-
