@@ -8,9 +8,9 @@
 import Foundation
 
 enum TravelStatus: String, Codable {
-    case upcoming = "UPCOMING"
+    case before = "BEFORE"
     case onogoing = "ONGOING"
-    case bygone = "BYGONE"
+    case after = "AFTER"
 }
 
 /// 여행 팟 조회 응답 모델
