@@ -7,14 +7,19 @@
 
 import Foundation
 
+enum TravelStatus: String, Codable {
+    case upcoming = "UPCOMING"
+    case onogoing = "ONGOING"
+    case bygone = "BYGONE"
+}
+
 /// 여행 팟 조회 응답 모델
 struct TravelPod: Codable, Identifiable {
     var id: Int
     var title: String
     var startDate: String
     var endDate: String
-    /// 여행 상태 (BEFORE, ONGOING, AFTER)
-    var status: String
+    var status: TravelStatus
     var imageUrl: String
     
     enum CodingKeys: String, CodingKey {
@@ -26,6 +31,7 @@ struct TravelPod: Codable, Identifiable {
         case imageUrl
     }
 }
+
 
 // MARK: - 사용 예시
 /*
