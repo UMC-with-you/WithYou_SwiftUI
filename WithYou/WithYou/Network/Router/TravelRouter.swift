@@ -59,6 +59,7 @@ extension TravelRouter: APITargetType {
     var task: Task {
         switch self {
         case .patchTravelPod(_, let pod):
+            
             return .requestJSONEncodable(pod)
         case .patchCombination(let combination):
             return .requestJSONEncodable(combination)

@@ -12,7 +12,7 @@ struct TravelCombinationRequest: Codable {
     let invitationCode: String
 }
 
-struct TravelInviteResponse: Codable {
+struct TravelCombinationResponse: Codable {
     let memberId: Int
     let travelId: Int
 }
