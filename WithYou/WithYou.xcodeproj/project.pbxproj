@@ -6,41 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D4C62D302E59A81E0073D9DD /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D4C62D2F2E59A81E0073D9DD /* CombineMoya */; };
+		D4C62D322E59A81E0073D9DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D4C62D312E59A81E0073D9DD /* Moya */; };
+		D4C62D342E59A81E0073D9DD /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D4C62D332E59A81E0073D9DD /* ReactiveMoya */; };
+		D4C62D362E59A81E0073D9DD /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D4C62D352E59A81E0073D9DD /* RxMoya */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		D4364BE62E475190004869E9 /* WithYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WithYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C62CD12E59A5DF0073D9DD /* WithYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WithYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D4A1924F2E5B15630021E19D /* Exceptions for "WithYou" folder in "WithYou" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D4C62CD02E59A5DF0073D9DD /* WithYou */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D4364BE82E475190004869E9 /* WithYou */ = {
+		D4C62CD32E59A5DF0073D9DD /* WithYou */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D4A1924F2E5B15630021E19D /* Exceptions for "WithYou" folder in "WithYou" target */,
+			);
 			path = WithYou;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D4364BE32E475190004869E9 /* Frameworks */ = {
+		D4C62CCE2E59A5DF0073D9DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C62D322E59A81E0073D9DD /* Moya in Frameworks */,
+				D4C62D302E59A81E0073D9DD /* CombineMoya in Frameworks */,
+				D4C62D362E59A81E0073D9DD /* RxMoya in Frameworks */,
+				D4C62D342E59A81E0073D9DD /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D4364BDD2E475190004869E9 = {
+		D4C62CC82E59A5DF0073D9DD = {
 			isa = PBXGroup;
 			children = (
-				D4364BE82E475190004869E9 /* WithYou */,
-				D4364BE72E475190004869E9 /* Products */,
+				D4C62CD32E59A5DF0073D9DD /* WithYou */,
+				D4C62CD22E59A5DF0073D9DD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D4364BE72E475190004869E9 /* Products */ = {
+		D4C62CD22E59A5DF0073D9DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4364BE62E475190004869E9 /* WithYou.app */,
+				D4C62CD12E59A5DF0073D9DD /* WithYou.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +72,71 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D4364BE52E475190004869E9 /* WithYou */ = {
+		D4C62CD02E59A5DF0073D9DD /* WithYou */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4364BF12E475192004869E9 /* Build configuration list for PBXNativeTarget "WithYou" */;
+			buildConfigurationList = D4C62CDC2E59A5E00073D9DD /* Build configuration list for PBXNativeTarget "WithYou" */;
 			buildPhases = (
-				D4364BE22E475190004869E9 /* Sources */,
-				D4364BE32E475190004869E9 /* Frameworks */,
-				D4364BE42E475190004869E9 /* Resources */,
+				D4C62CCD2E59A5DF0073D9DD /* Sources */,
+				D4C62CCE2E59A5DF0073D9DD /* Frameworks */,
+				D4C62CCF2E59A5DF0073D9DD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				D4364BE82E475190004869E9 /* WithYou */,
+				D4C62CD32E59A5DF0073D9DD /* WithYou */,
 			);
 			name = WithYou;
 			packageProductDependencies = (
+				D4C62D2F2E59A81E0073D9DD /* CombineMoya */,
+				D4C62D312E59A81E0073D9DD /* Moya */,
+				D4C62D332E59A81E0073D9DD /* ReactiveMoya */,
+				D4C62D352E59A81E0073D9DD /* RxMoya */,
 			);
 			productName = WithYou;
-			productReference = D4364BE62E475190004869E9 /* WithYou.app */;
+			productReference = D4C62CD12E59A5DF0073D9DD /* WithYou.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D4364BDE2E475190004869E9 /* Project object */ = {
+		D4C62CC92E59A5DF0073D9DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					D4364BE52E475190004869E9 = {
+					D4C62CD02E59A5DF0073D9DD = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
-			buildConfigurationList = D4364BE12E475190004869E9 /* Build configuration list for PBXProject "WithYou" */;
+			buildConfigurationList = D4C62CCC2E59A5DF0073D9DD /* Build configuration list for PBXProject "WithYou" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = D4364BDD2E475190004869E9;
+			mainGroup = D4C62CC82E59A5DF0073D9DD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D4C62D2E2E59A66C0073D9DD /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = D4364BE72E475190004869E9 /* Products */;
+			productRefGroup = D4C62CD22E59A5DF0073D9DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4364BE52E475190004869E9 /* WithYou */,
+				D4C62CD02E59A5DF0073D9DD /* WithYou */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D4364BE42E475190004869E9 /* Resources */ = {
+		D4C62CCF2E59A5DF0073D9DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +146,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D4364BE22E475190004869E9 /* Sources */ = {
+		D4C62CCD2E59A5DF0073D9DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,8 +156,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		D4364BEF2E475192004869E9 /* Debug */ = {
+		D4C62CDA2E59A5E00073D9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D4C62CD32E59A5DF0073D9DD /* WithYou */;
+			baseConfigurationReferenceRelativePath = Service/Util/Secret.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -189,8 +222,10 @@
 			};
 			name = Debug;
 		};
-		D4364BF02E475192004869E9 /* Release */ = {
+		D4C62CDB2E59A5E00073D9DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D4C62CD32E59A5DF0073D9DD /* WithYou */;
+			baseConfigurationReferenceRelativePath = Service/Util/Secret.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -246,8 +281,10 @@
 			};
 			name = Release;
 		};
-		D4364BF22E475192004869E9 /* Debug */ = {
+		D4C62CDD2E59A5E00073D9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D4C62CD32E59A5DF0073D9DD /* WithYou */;
+			baseConfigurationReferenceRelativePath = Service/Util/Secret.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -256,6 +293,7 @@
 				DEVELOPMENT_TEAM = UTJ6Y8Y7TD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WithYou/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -274,8 +312,10 @@
 			};
 			name = Debug;
 		};
-		D4364BF32E475192004869E9 /* Release */ = {
+		D4C62CDE2E59A5E00073D9DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D4C62CD32E59A5DF0073D9DD /* WithYou */;
+			baseConfigurationReferenceRelativePath = Service/Util/Secret.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -284,6 +324,7 @@
 				DEVELOPMENT_TEAM = UTJ6Y8Y7TD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WithYou/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,25 +346,59 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D4364BE12E475190004869E9 /* Build configuration list for PBXProject "WithYou" */ = {
+		D4C62CCC2E59A5DF0073D9DD /* Build configuration list for PBXProject "WithYou" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D4364BEF2E475192004869E9 /* Debug */,
-				D4364BF02E475192004869E9 /* Release */,
+				D4C62CDA2E59A5E00073D9DD /* Debug */,
+				D4C62CDB2E59A5E00073D9DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4364BF12E475192004869E9 /* Build configuration list for PBXNativeTarget "WithYou" */ = {
+		D4C62CDC2E59A5E00073D9DD /* Build configuration list for PBXNativeTarget "WithYou" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D4364BF22E475192004869E9 /* Debug */,
-				D4364BF32E475192004869E9 /* Release */,
+				D4C62CDD2E59A5E00073D9DD /* Debug */,
+				D4C62CDE2E59A5E00073D9DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4C62D2E2E59A66C0073D9DD /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4C62D2F2E59A81E0073D9DD /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4C62D2E2E59A66C0073D9DD /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		D4C62D312E59A81E0073D9DD /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4C62D2E2E59A66C0073D9DD /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		D4C62D332E59A81E0073D9DD /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4C62D2E2E59A66C0073D9DD /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		D4C62D352E59A81E0073D9DD /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4C62D2E2E59A66C0073D9DD /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = D4364BDE2E475190004869E9 /* Project object */;
+	rootObject = D4C62CC92E59A5DF0073D9DD /* Project object */;
 }
