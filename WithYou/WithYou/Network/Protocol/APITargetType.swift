@@ -12,10 +12,11 @@ protocol APITargetType: TargetType {}
 
 extension APITargetType {
     var baseURL: URL {
-        print(Config.baseURL)
         guard let url = URL(string: Config.baseURL) else {
             fatalError("Invalid Base URL")
         }
         return url
     }
+    
+    var validationType: ValidationType { .successCodes }
 }
