@@ -24,4 +24,10 @@ class APIManager: @unchecked Sendable {
         }
         return MoyaProvider<T>(stubClosure: MoyaProvider.immediatelyStub, plugins: [authPlugin])
     }
+    
+    lazy var decoder: JSONDecoder = {
+        let d = JSONDecoder()
+        d.keyDecodingStrategy = .convertFromSnakeCase
+        return d
+    }()
 }
