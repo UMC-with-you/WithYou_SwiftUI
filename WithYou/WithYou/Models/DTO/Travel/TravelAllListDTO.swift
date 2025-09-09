@@ -7,6 +7,11 @@
 
 import Foundation
 
+/// 여행 팟 조회 요청 모델
+struct TravelAllListRequest: Codable {
+    var localDate: String
+}
+
 /// 여행 팟 조회 응답 모델
 struct TravelAllListResponse: Codable, Identifiable {
     var id: UUID = .init()

@@ -7,6 +7,12 @@
 
 import Foundation
 
+/// Notice 체크 요청 DTO
+struct NoticeCheckRequestDTO: Codable {
+    var noticeId: Int
+    var memberId: Int
+}
+
 /// Notice 체크 응답 DTO
 struct NoticeCheckResponseDTO: Codable {
     var noticeId: Int

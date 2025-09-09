@@ -10,11 +10,13 @@ import Moya
 
 enum TravelRouter {
     /// 모든 여행 팟 조회
-    case getTravelAllList
+    case getTravelAllList(listRequest: TravelAllListRequest)
+    /// 여행 팟 추가
+    case postTravelCreate(podRequest: TravelCreateRequest)
     /// 여행 팟 삭제
     case deleteTravelPod(travelId: Int)
     /// 여행 팟 수정
-    case patchTravelPod(travelId: Int, pod: TravelPatchRequest)
+    case patchTravelPod(travelId: Int, podRequest: TravelPatchRequest)
     /// 여행 팟 멤버 추방
     case patchTravelOutMember(travelId: Int, memberId: Int)
     /// 여행 팟 합류
@@ -30,10 +32,12 @@ extension TravelRouter: APITargetType {
         switch self {
         case .getTravelAllList:
             return "/api/v1/travels"
+        case .postTravelCreate:
+            return "/api/v1/travels"
         case .deleteTravelPod(let travelId):
-            return "/api/v1/\(travelId)"
+            return "/api/v1/travels/\(travelId)"
         case .patchTravelPod(let travelId, _):
-            return "/api/v1/\(travelId)"
+            return "/api/v1/travels/\(travelId)"
         case .patchTravelOutMember(let travelId, let memberId):
             return "/api/v1/travels/\(travelId)/members/\(memberId)"
         case .patchCombination:
@@ -47,8 +51,10 @@ extension TravelRouter: APITargetType {
     
     var method: Moya.Method {
         switch self {
-        case .getTravelAllMember, .getTravelInviteCode:
+        case .getTravelAllList, .getTravelAllMember, .getTravelInviteCode:
             return .get
+        case .postTravelCreate:
+            return .post
         case .deleteTravelPod:
             return .delete
         default:
@@ -58,9 +64,12 @@ extension TravelRouter: APITargetType {
     
     var task: Task {
         switch self {
-        case .patchTravelPod(_, let pod):
-            
-            return .requestJSONEncodable(pod)
+        case .getTravelAllList(let request):
+            return .requestJSONEncodable(request)
+        case .postTravelCreate(let request):
+            return .requestJSONEncodable(request)
+        case .patchTravelPod(_, let request):
+            return .requestJSONEncodable(request)
         case .patchCombination(let combination):
             return .requestJSONEncodable(combination)
         default:

@@ -7,6 +7,11 @@
 
 import Foundation
 
+/// 해당 TravelPod의 모든 Notice 조회 요청 DTO
+struct NoticeAllListRequestDTO: Codable {
+    var logId: Int
+}
+
 /// 해당 TravelPod의 모든 Notice 조회 응답 DTO
 struct NoticeAllListResponseDTO: Codable, Identifiable {
     var id: UUID = .init()

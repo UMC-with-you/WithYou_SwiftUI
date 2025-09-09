@@ -16,8 +16,8 @@ class TestViewModel {
     var data: [TravelAllListResponse] = .init()
     var cancellables = Set<AnyCancellable>()
     
-    func travelAllList() {
-        travel.getTravelAllList()
+    func travelAllList(listRequest: TravelAllListRequest) {
+        travel.getTravelAllList(listRequest: listRequest)
             .validationResult()
             .sink(receiveCompletion: { [weak self] completion in
                 guard let self = self else { return }
@@ -31,10 +31,10 @@ class TestViewModel {
                 }
             }, receiveValue: { [weak self] response in
                 guard let self = self else { return }
-                self.data = response
+                self.data = response ?? []
                 
                 #if DEBUG
-                print(response)
+                print(response ?? [])
                 #endif
             })
             .store(in: &cancellables)

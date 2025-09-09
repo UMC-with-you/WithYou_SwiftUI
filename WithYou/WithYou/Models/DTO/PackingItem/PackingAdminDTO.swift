@@ -8,11 +8,15 @@
 import Foundation
 
 struct PackingAdminRequest: Codable {
-    let packingItemId: Int
     let packerId: Int
     
     enum CodingKeys: String, CodingKey {
-        case packingItemId
         case packerId = "packer_id"
     }
+}
+
+struct PackingAdminResponse: Codable {
+    let packingItemId: Int
+    let packerId: Int
+    let checkboxState: Bool
 }

@@ -7,6 +7,13 @@
 
 import Foundation
 
+struct RewindModifyRequest: Codable {
+    let mvpCandidateId: Int
+    let mood: RewindMoodType
+    let qnaList: [QnAData]
+    let comment: String
+}
+
 struct RewindModifyResponse: Codable {
     let rewindId: Int
     let createdAt: String

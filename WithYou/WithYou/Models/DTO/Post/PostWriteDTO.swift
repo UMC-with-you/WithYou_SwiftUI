@@ -8,7 +8,7 @@
 import Foundation
 
 /// 게시글 작성
-struct PostWriteReqest: Codable {
+struct PostWriteRequest: Codable {
     let request: RequestText
     let mediaList: [String]
 }
