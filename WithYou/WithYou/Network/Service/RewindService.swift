@@ -47,6 +47,6 @@ class RewindService: RewindServiceProtocol, BaseAPIService {
     }
     
     func getRewindQuestionList() -> AnyPublisher<ResponseDTO<[RewindQuestListResponse]?>, MoyaError> {
-        request(.getRewindQeustionList)
+        request(.getRewindQuestionList)
     }
 }

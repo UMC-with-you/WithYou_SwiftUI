@@ -12,7 +12,7 @@ struct Rewind: Codable {
     var day: Int
     var writerId: Int
     var mvpCandidateId: Int
-    var mood: String
+    var mood: RewindMoodType
     var comment: String
     var rewindQnaList: [RewindQna]
     var createdAt: String

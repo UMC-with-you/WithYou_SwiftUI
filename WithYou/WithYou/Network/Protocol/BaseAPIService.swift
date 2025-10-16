@@ -15,14 +15,22 @@ protocol BaseAPIService {
     
     var provider: MoyaProvider<Target> { get }
     var decoder: JSONDecoder { get }
-    var callback: DispatchQueue { get }
+    var callbackQueue: DispatchQueue { get }
 }
 extension BaseAPIService {
-    func request<T: Decodable>(_ target: Target) -> AnyPublisher<ResponseDTO<T>, MoyaError> {
+    func request<T: Decodable>(_ target: Target) -> AnyPublisher<ResponseData<T>, MoyaError> {
         provider.requestPublisher(target)
             .filterSuccessfulStatusCodes()
-            .map(ResponseDTO<T>.self, using: decoder)
-            .receive(on: callback)
+            .map(ResponseData<T>.self, using: decoder)
+            .receive(on: callbackQueue)
+            .eraseToAnyPublisher()
+    }
+
+    func requestNoDTO<T: Decodable>(_ target: Target) -> AnyPublisher<T, MoyaError> {
+        provider.requestPublisher(target)
+            .filterSuccessfulStatusCodes()
+            .map(T.self, using: decoder)
+            .receive(on: callbackQueue)
             .eraseToAnyPublisher()
     }
 }

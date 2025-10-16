@@ -10,8 +10,13 @@ import Foundation
 struct RewindModifyRequest: Codable {
     let mvpCandidateId: Int
     let mood: RewindMoodType
-    let qnaList: [QnAData]
+    let qnaList: [QnAModifyData]
     let comment: String
+}
+
+struct QnAModifyData: Codable {
+    let qnaId: Int
+    let answer: String
 }
 
 struct RewindModifyResponse: Codable {

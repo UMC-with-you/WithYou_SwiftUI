@@ -19,8 +19,8 @@ enum RewindRouter {
     case deleteRewind(travelId: Int, rewindId: Int)
     /// Rewind 수정
     case patchRewind(travelId: Int, rewindId: Int, rewindRequest: RewindModifyRequest)
-    /// Rewind Qeustion 목록 조회
-    case getRewindQeustionList
+    /// Rewind Question 목록 조회
+    case getRewindQuestionList
 }
 
 extension RewindRouter: APITargetType {
@@ -36,7 +36,7 @@ extension RewindRouter: APITargetType {
             return "/api/v1/travels/\(travelId)/rewinds/\(rewindId)"
         case .patchRewind(let travelId, let rewindId, _):
             return "/api/v1/travels/\(travelId)/rewinds/\(rewindId)"
-        case .getRewindQeustionList:
+        case .getRewindQuestionList:
             return "/api/v1/rewindQuestions"
         }
     }
